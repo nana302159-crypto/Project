@@ -1,3 +1,5 @@
+version: '3.8'
+
 services:
   flask-mvp:
     build: .
@@ -8,4 +10,3 @@ services:
       - .:/app
     environment:
       - FLASK_ENV=development
-      
