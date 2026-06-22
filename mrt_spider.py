@@ -8,7 +8,7 @@ from app import app, db, MRTData
 # 1. 去大平台抓取 CSV 的網址清單
 url = "https://data.taipei/api/v1/dataset/eb481f58-1238-4cff-8caa-fa7bb20cb4f4?scope=resourceAquire"
 print("📥 開始從大平台下載捷運資料清單...")
-response = requests.get(url)
+response = requests.get(url, verify=False)
 api_response = response.json()  
 results = api_response['result']['results']
 
